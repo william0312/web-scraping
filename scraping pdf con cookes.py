@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # 📁 Configuración de rutas
-base_path = 'C:/Users/william.mora/Desktop/codigo/'
+base_path = 'C:/Users/xxxxx/'
 archivo_excel = "Anexos_Descarga_ETB.xlsx"
 download_dir = os.path.join(base_path, "descargas")
 os.makedirs(download_dir, exist_ok=True)
@@ -32,8 +32,8 @@ try:
     usuario = wait.until(EC.visibility_of_element_located((By.NAME, "LoginForm[username]")))
     password = wait.until(EC.visibility_of_element_located((By.NAME, "LoginForm[password]")))
 
-    usuario.send_keys("william.mora")     # <-- Cambiar por usuario real
-    password.send_keys("123456")          # <-- Cambiar por contraseña real
+    usuario.send_keys("xxxxx")     # <-- Cambiar por usuario real
+    password.send_keys("xxxxx")          # <-- Cambiar por contraseña real
     password.send_keys(Keys.RETURN)
 
     wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
